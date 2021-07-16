@@ -4,9 +4,7 @@
   "description": "final cripto project",
   "main": "index.js",
   "scripts": {
-    "build": "npx webpack",
-    "deploy": "node gh-pages.js --exit",
-    "publish": "npm run build && node gh-pages.js --exit",
+    "deploy": "webpack && gh-pages -d dist",
     "start": "webpack serve --mode development --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

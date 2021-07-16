@@ -1,8 +1,5 @@
-# FILES
-gh-pages.js
-
 # DIRS
-test/
-build/
-dist/
 node_modules/
+
+dist/
+test/
