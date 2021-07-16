@@ -41,11 +41,12 @@
         </div>
     </header>
     <section class="main-content">
-        <div class="card">
+        <div class="card copy">
             <div class="card-head">
                 <p id="info-left" class="card-info">Text to Encode</p>
                 <input class="toggle" id="switch" type="checkbox" />
                 <label class="switch" for="switch" id="coder">ENCODING</label>
+                <button title="Copy to Clipboard" class="copy-clipboard"></button>
             </div>
             <div class="card-body">
                 <textarea id="text-left" spellcheck="false" class="card-content" rows="10" cols="30"></textarea>
@@ -85,9 +86,10 @@
                 </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-head">
+        <div class="card copy">
+            <div class="card-head" style="padding-bottom: 1rem;">
                 <p id="info-right" class="card-info">Encoded Text</p>
+                <button title="Copy to Clipboard" class="copy-clipboard"></button>
             </div>
             <div class="card-body">
                 <textarea id="text-right" spellcheck="false" class="card-content" rows="10" cols="30"></textarea>

@@ -1,7 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    mode: "production",
+    // mode: "production",
+    mode: "development",
     entry: './src/app.js',
     output: {
         filename: 'app.js',

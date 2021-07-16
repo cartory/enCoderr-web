@@ -116,6 +116,7 @@ strong {
 }
 
 .card-head {
+  position: relative;
   padding: 0.7rem;
   border-radius: 3px;
   color: var(--cerulean);
@@ -123,6 +124,66 @@ strong {
   border-bottom: 0.5px solid lightgray;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+.copy-clipboard {
+  cursor: pointer;
+  position: absolute;
+
+  top: 0.5rem;
+  right: 0.7rem;
+
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  background: var(--cerulean);
+  border-radius: 8px;
+  transition: all 0.1s ease-in-out;
+}
+.copy-clipboard.active {
+  background: var(--gunMetal);
+}
+
+.copy-clipboard.active::before,
+.copy-clipboard.active::after {
+  content: "📄";
+  border: none;
+  transition: all 0.3s ease-in-out;
+  top: 0rem;
+  left: 0rem;
+  transform: translate(60%, 40%);
+  background: transparent;
+}
+
+.copy-clipboard:active {
+  background: var(--gunMetal);
+}
+
+.copy-clipboard::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  transform: scale(0.8);
+  top: 0.33rem;
+  right: 0.33rem;
+  background: #fff;
+  border: 1px solid var(--cerulean);
+}
+
+.copy-clipboard::before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  transform: scale(0.8);
+  left: 0.34rem;
+  bottom: 0.34rem;
+  background: #fff;
+  border: 1px solid var(--cerulean);
 }
 
 .card-info {

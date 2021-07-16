@@ -22,6 +22,24 @@ ost.playbackRate = 1.1
 document.getElementById('logo').src = logo
 document.addEventListener('click', async _ => await ost.play())
 
+const cards = document.getElementsByClassName('copy')
+
+for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+
+    let copyButton = card.querySelector('.card-head .copy-clipboard')
+    copyButton.addEventListener('click', () => {
+        card.querySelector('.card-body .card-content').select()
+        document.execCommand('copy')
+        copyButton.classList.add('active')
+        
+        window.getSelection().removeAllRanges()
+        setTimeout(() => {
+            copyButton.classList.remove('active')
+        }, 1000);
+    })
+}
+
 // LOADING STUDENTS
 const ul = document.getElementById('students')
 students.forEach(student => {
