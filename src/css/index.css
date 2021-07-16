@@ -249,7 +249,7 @@ strong {
 }
 
 #text-right {
-  color: grey;
+  color: darkgray;
 }
 
 @media only screen and (max-width: 450px) {
